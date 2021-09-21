@@ -1,0 +1,63 @@
+/* work sans */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+/* variables */
+:root {
+  /* fonts */
+  --main-text-color: #23272a;
+  --heading-font: "Work Sans", var(--main-font), sans-serif !important;
+  --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  /* colors */
+  --c-teal: #90e0ff;
+  --c-red: #ff333d;
+  --c-purple: #732bb7;
+  --b-slider: #f0f2f5;
+  --swiper-theme-color: #4b5563 !important;
+  /* spacial */
+  --swiper-navigation-size: 2rem;
+}
+html {
+  color: var(--main-text-color);
+}
+body {
+  color: inherit;
+}
+.heading-font-override {
+  font-family: var(--heading-font);
+}
+.heading-font-initial {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+/* links */
+.nav .active {
+  color: var(--c-purple);
+}
+a.underline {
+  text-decoration-color: var(--c-purple);
+  text-decoration-thickness: 2px;
+}
+a:hover {
+  color: var(--c-purple) !important;
+}
+.breadcrumbs a:hover {
+  color: var(--c-purple);
+  text-decoration: underline;
+}
+.swiper {
+  background: var(--b-slider);
+  width: 100%;
+  height: 26rem;
+}
+.swiper.showcase {
+  margin: 0.5rem 0;
+}
+@media (min-width: 1024px) {
+  .swiper {
+    height: 40rem;
+  }
+  .swiper.showcase {
+    margin: 1rem 0;
+  }
+}

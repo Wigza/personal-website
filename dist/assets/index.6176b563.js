@@ -1,0 +1,1 @@
+import{S as s,i as e,s as t,e as n,j as o,n as a,l as r}from"./vendor.75c3f65e.js";function l(s){let e;return{c(){e=n("h1"),e.textContent="Welcome logged in user"},m(s,t){o(s,e,t)},p:a,i:a,o:a,d(s){s&&r(e)}}}class c extends s{constructor(s){super(),e(this,s,null,l,t,{})}}export{c as default};
