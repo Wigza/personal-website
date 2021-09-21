@@ -1,0 +1,1 @@
+import{S as s,i as e,s as a,e as n,z as t,j as r,n as i,l}from"./vendor.7b43f32a.js";function o(s){let e;return{c(){e=n("div"),e.innerHTML="<h1>I&#39;m src/pages/example/nesting/index.svelte</h1>",t(e,"text-align","center")},m(s,a){r(s,e,a)},p:i,i:i,o:i,d(s){s&&l(e)}}}class c extends s{constructor(s){super(),e(this,s,null,o,a,{})}}export{c as default};
