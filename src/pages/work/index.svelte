@@ -3,6 +3,8 @@
     metatags.title = 'Tim Phillips, Designer'
     metatags.description = 'Description coming soon...'
     import SliderImage from './_components/SliderImage.svelte';
+
+    import { url } from '@roxi/routify';
     
     import { Swiper, SwiperSlide } from 'swiper/svelte';
 
@@ -30,7 +32,7 @@
                     </div>
                 </div>
                 <p>I work as the lead product designer and front end engineer at Assembler, within their platform team, which works across the entire spectrum of the Assembler product suite.</p>
-                <p>Assembler is a platform that allows users to create and manage web applications. Assembler’s product suite is made up of 3 seperate platforms that work in combination to provide users the necessary tools to build web applications. I've had the opportunity to design these platforms, creating a harmonious <a href="/work/designsystems/assembler" class="underline">design system</a> that provides a consistent and intuitive user experience across the product suite. </p>
+                <p>Assembler is a platform that allows users to create and manage web applications. Assembler’s product suite is made up of 3 seperate platforms that work in combination to provide users the necessary tools to build web applications. I've had the opportunity to design these platforms, creating a harmonious <a href="{$url('./designsystems/assembler')}" class="underline">design system</a> that provides a consistent and intuitive user experience across the product suite. </p>
                 <p>I’ve breifly outlined these platforms and provided examples of each below.</p>
             </div>    
             <div class="grid gap-2 leading-relaxed">
