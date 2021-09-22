@@ -1,7 +1,47 @@
 /* work sans */
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
-/* variables */
+[data-theme="assembler"] {
+  /* Primary */
+  /* blue */
+  --c-p-blue-01: #012956;
+  --c-p-blue-02: #003f87;
+  --c-p-blue-03: #0053b3;
+  --c-p-blue-04: #0c60c0;
+  --c-p-blue-05: #1e7ce6;
+  --c-p-blue-06: #4c99f0;
+  --c-p-blue-07: #78b1f3;
+  --c-p-blue-08: #a2c9f4;
+  --c-p-blue-09: #e6f0fc;
+  /* darkgrey */
+  --c-p-darkgrey-01: #000000;
+  --c-p-darkgrey-02: #23272a;
+  --c-p-darkgrey-03: #3c4348;
+  --c-p-darkgrey-04: #5e6870;
+  --c-p-darkgrey-05: #9ea4a9;
+  --c-p-darkgrey-06: #bbc1c6;
+  --c-p-darkgrey-07: #d0d5dc;
+  --c-p-darkgrey-08: #e1e4e8;
+  --c-p-darkgrey-09: #fafbfc;
+  /* white & black */
+  --c-white: #ffffff;
+  --c-white: var(--c-p-darkgrey-01);
+  /* Status */
+  --c-info-warning-01: #ffc414;
+  --c-info-warning-02: #ffe189;
+  --c-info-warning-03: #fff6dc;
+  --c-info-warning-content: #634c0a;
+  --c-info-negative-01: #b50307;
+  --c-info-negative-02: #da8183;
+  --c-info-negative-03: #f0cdcd;
+  --c-info-negative-content: #840508;
+  --c-info-positive-01: #186342;
+  --c-info-positive-02: #8bb1a0;
+  --c-info-positive-03: #d1e0dc;
+  --c-info-positive-content: #0f422b;
+}
+
+/* site variables */
 :root {
   /* fonts */
   --main-text-color: #23272a;
@@ -45,6 +85,10 @@ a:hover {
   color: var(--c-purple);
   text-decoration: underline;
 }
+[data-theme="assembler"] .breadcrumbs .link:hover {
+  color: var(--c-p-blue-03);
+  text-decoration: underline;
+}
 .swiper {
   background: var(--b-slider);
   width: 100%;
@@ -60,4 +104,115 @@ a:hover {
   .swiper.showcase {
     margin: 1rem 0;
   }
+}
+
+.dropdown .fas {
+  font-weight: 900;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+[multiple],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+  appearance: none;
+}
+
+select {
+  background-image: url("/select.svg");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  width: 1em;
+  height: 1em;
+}
+[type="checkbox"]:checked,
+[type="radio"]:checked {
+  border-color: transparent;
+  background-color: currentColor;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3em;
+  height: 1.5em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.15em;
+  width: 1.15em;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  box-shadow: 0 2px 2px 0px rgb(0 0 0 / 12%);
+}
+
+input:checked + .slider {
+  background-color: #0053b3;
+}
+
+input:focus + .slider {
+  box-shadow: none;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.5em);
+  -ms-transform: translateX(1.5em);
+  transform: translateX(1.5em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

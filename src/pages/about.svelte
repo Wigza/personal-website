@@ -23,8 +23,8 @@
                     <p><a class="underline" target="_blank" href="/assets/resume/TimPhillips_Resume.pdf">Resume</a></p>
                 </div>                
                 <div>
-                    <p><a class="underline" href="/work">LinkedIn</a></p>
-                    <p><a class="underline" href="/work">GitHub</a></p>
+                    <p><a class="underline" target="_blank" href="https://www.linkedin.com/in/tim-phillips-975239b9/">LinkedIn</a></p>
+                    <p><a class="underline" target="_blank" href="https://github.com/Wigza">GitHub</a></p>
                 </div>                
             </div> 
         </div> 
