@@ -78,6 +78,9 @@ a.underline {
   text-decoration-color: var(--c-purple);
   text-decoration-thickness: 2px;
 }
+a {
+  transition: ease-in-out 0.15s;
+}
 a:hover {
   color: var(--c-purple) !important;
 }
@@ -85,6 +88,15 @@ a:hover {
   color: var(--c-purple);
   text-decoration: underline;
 }
+/* link cards */
+a.link-card:hover {
+  color: initial !important;
+  transform: translateY(-0.25rem);
+}
+a.link-card:hover .cta svg {
+  transform: translateX(0.25rem);
+}
+
 [data-theme="assembler"] .breadcrumbs .link:hover {
   color: var(--c-p-blue-03);
   text-decoration: underline;

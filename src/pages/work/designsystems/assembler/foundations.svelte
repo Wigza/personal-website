@@ -8,6 +8,10 @@
     import { url } from '@roxi/routify';
 </script>
 
+<svelte:head>
+    <script src="https://kit.fontawesome.com/86f8752325.js" crossorigin="anonymous"></script> 
+</svelte:head>
+
 <section class="relative container max-w-2xl mx-auto px-4 heading-font-override">
     <div class="my-8">
         <!-- breadcrumbs -->
@@ -24,7 +28,7 @@
                 Assembler
             </a>
             <div class="text-sm font-medium text-gray-300">/</div>
-            <div class="truncate max-w-xs overflow-ellipsis text-sm font-bold text-gray-900">Assembler</div>
+            <div class="truncate max-w-xs overflow-ellipsis text-sm font-bold text-gray-900">Foundations</div>
         </div>
         <!-- page heading -->
         <div class="text-3xl font-bold mb-10">Foundations</div>
@@ -383,9 +387,6 @@
                 <div class="h-12 flex justify-center items-center text-xl">
                     <i class="fas fa-palette"></i>
                 </div>
-            </div>
-            <div>
-                <script src="https://kit.fontawesome.com/86f8752325.js" crossorigin="anonymous"></script> 
             </div>
         </div> 
         <div class="grid gap-6 border-b pb-10 mb-10"> 
