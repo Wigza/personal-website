@@ -6,6 +6,10 @@
     import { url } from '@roxi/routify';
 </script>
 
+<svelte:head>
+    <script src="https://kit.fontawesome.com/86f8752325.js" crossorigin="anonymous"></script> 
+</svelte:head>
+
 <section class="container max-w-2xl mx-auto px-4 heading-font-override">
     <div class="my-8">
         <!-- breadcrumbs -->
@@ -22,20 +26,12 @@
                 Assembler
             </a>
             <div class="text-sm font-medium text-gray-300">/</div>
-            <div class="truncate max-w-xs overflow-ellipsis text-sm font-bold text-gray-900">Assembler</div>
+            <div class="truncate max-w-xs overflow-ellipsis text-sm font-bold text-gray-900">Components</div>
         </div>
         <!-- page heading -->
-        <div class="text-3xl font-bold mb-10">Assembler Platform Design System</div>
+        <div class="text-3xl font-bold mb-10">Components</div>
         <!-- page content -->
-        <div class="grid gap-6 border-b pb-10 mb-10"> 
-            <div class="grid gap-2 leading-relaxed">
-                <div>
-                    <div class="text-2xl font-semibold">
-                        Components
-                    </div>
-                </div>
-                <p>Components are the reuseable UI blocks within the platform design system, when used in combination with each other, they create patterns and intuitive experiences across the Assembler platform.</p>
-            </div> 
+        <div class="grid gap-6 border-b pb-10 mb-10">  
             <div class="grid gap-2 leading-relaxed">
                 <div>
                     <div class="text-xl font-semibold">
@@ -70,7 +66,7 @@
                 </div>
                 <div class="space-x-1 heading-font-initial">
                     <div class="rounded-lg inline font-semibold text-white bg-gray-700 px-4 py-2">
-                        Primary
+                        Secondary
                     </div>
                     <div class="rounded-lg inline font-semibold text-white bg-gray-800 px-4 py-2">
                         Hover
@@ -88,7 +84,7 @@
                 </div>
                 <div class="space-x-1 heading-font-initial">
                     <div class="rounded-lg inline font-semibold text-black bg-gray-200 px-4 py-2">
-                        Primary
+                        Basic
                     </div>
                     <div class="rounded-lg inline font-semibold text-black bg-gray-300 px-4 py-2">
                         Hover
@@ -146,7 +142,6 @@
                         Settings
                     </div>
                 </div>
-                <script src="https://kit.fontawesome.com/86f8752325.js" crossorigin="anonymous"></script> 
             </div>
         </div>
         <!-- page content -->
@@ -438,7 +433,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 heading-font-initial">
-                    <div>
+                    <div class="h-48 lg:h-72">
                         <div class="relative inline-block rounded-lg cursor-pointer text-black bg-gray-400 py-2 px-3">
                             <i class="fas fa-ellipsis-h opacity-100"></i>
                             <!-- dropdown menu -->
@@ -455,7 +450,7 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="h-64 lg:h-72">
                         <div class="relative inline-block rounded-lg cursor-pointer text-black px-4 py-2 bg-gray-200">
                             <i class="fas fa-cogs mr-1"></i>
                             <span class="font-semibold">File Types</span>
@@ -484,7 +479,7 @@
             </div>
         </div> 
         <!-- page content -->
-        <div data-theme="assembler" class="grid gap-6 border-b pb-10 mb-10">
+        <div data-theme="assembler" class="grid gap-6 mb-10">
             <div class="grid gap-2 leading-relaxed">
                 <div>
                     <div class="text-xl font-semibold">
@@ -492,7 +487,78 @@
                     </div>
                 </div>
                 <p>Modals are used frequently throughout Assembler’s platforms. Modals display content that requires user interaction within a window displayed above the page.</p>
-                <p>Modals appear conditionally, after a user has interacted with an activating element on the page, in most cases, a button.</p>
+                <p>Modals appear conditionally, after a user has interacted with an activating element on the page which is in most cases a button.</p>
+            </div>
+            <div class="grid gap-2">
+                <div class="font-semibold">
+                    Interactive Modal
+                </div>
+                <div style="background:var(--c-p-darkgrey-04);" class="flex justify-center items-center w-full px-8 py-12">
+                    <div class="relative w-full lg:w-4/5 bg-white rounded-lg shadow-xl heading-font-initial">
+                        <div class="absolute -top-8 -right-8 p-3 text-white opacity-50 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="p-4 border-b leading-relaxed">
+                            <div class="font-semibold">New Record Type</div>
+                            <div class="text-sm text-gray-500">To create a new record type, please fill out the short form below.</div>
+                        </div>
+                        <div class="p-4 leading-relaxed">
+                            <div class="grid gap-6">
+                                <div class="grid gap-2">
+                                    <div class="text-sm font-medium">
+                                        Name
+                                    </div>
+                                    <input class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg w-72" placeholder="Placeholder" type="text">
+                                </div>
+                                <div class="grid gap-2">
+                                    <div class="text-sm font-medium">
+                                        Code
+                                    </div>
+                                    <input class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg w-72" placeholder="Placeholder" type="text">
+                                </div>
+                                <div class="flex justify-end space-x-2">
+                                    <div class="rounded-lg inline-block font-semibold text-white bg-blue-700 px-4 py-1">
+                                        Save
+                                    </div>
+                                    <div class="rounded-lg inline-block font-semibold text-black bg-gray-200 px-4 py-1">
+                                        Cancel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="grid gap-2">
+                <div class="font-semibold">
+                    Informative Modal
+                </div>
+                <div style="background:var(--c-p-darkgrey-04);" class="flex justify-center items-center w-full px-8 py-12">
+                    <div class="relative w-full bg-white rounded-lg shadow-xl heading-font-initial">
+                        <div class="absolute -top-8 -right-8 p-3 text-white opacity-50 hover:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                        <div class="pt-4 px-4 border-b leading-relaxed">
+                            <div class="font-semibold">Record Type Permissions</div>
+                            <div class="tab-menu flex items-center space-x-4">
+                                <div class="item py-2 text-black font-medium text-sm border-b-2 border-blue-600">About</div>
+                                <div class="item py-2 text-gray-500 text-sm">Roles & Groups</div>
+                            </div>
+                        </div>
+                        <div class="p-4 leading-relaxed">
+                            <div class="tab-content">
+                                <div class="tab-content grid gap-6">
+                                    <p class="text-sm leading-relaxed text-gray-800">Permissions consists of <span class="font-semibold">Roles</span> and <span class="font-semibold">Groups.</span> Users are invited to your application through different role types (eg. an Owner role), that role lives within a group (eg. Client Access group). It’s at the group level at which a user gains access to your appllication.</p>
+                                    <img src="/assets/assembler_ds_diagrams/permissions.png" alt="permissions graphic">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div> 
         </div> 
     </div>

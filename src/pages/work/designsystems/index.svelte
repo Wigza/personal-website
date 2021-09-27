@@ -60,12 +60,12 @@
             <div class="grid gap-2 leading-relaxed">
                 <div class="text-3xl font-bold">Design Systems</div>
                 <div class="grid gap-4 mt-4">
-                    <a class="rounded-lg p-8 bg-gray-100 grid grid-cols-1 gap-2" href="{$url('../../work/designsystems/assembler')}">
+                    <a class="link-card rounded-lg p-8 bg-gray-100 hover:bg-gray-200 grid grid-cols-1 gap-2" href="{$url('../../work/designsystems/assembler')}">
                         <div class="font-semibold text-2xl">Assembler</div>
                         <p class="text-lg">Assembler’s platform design system has been carefully designed to give designers and developers the ability to build simple, beautiful and intuitive expereriences within the Assembler product suite.</p>
-                        <div class="font-semibold flex items-center">
+                        <div class="cta transition font-semibold flex items-center">
                             View Assembler Design System
-                            <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="ml-1 h-4 w-4 duration-150 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
                         </div>
