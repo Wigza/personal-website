@@ -2,8 +2,6 @@
     import { metatags } from '@roxi/routify'
     metatags.title = 'Tim Phillips, Designer'
     metatags.description = 'Description coming soon...'
-    import Colour from '../../_components/Colour.svelte';
-    import FontStack from '../../_components/FontStack.svelte';
     
     import { url } from '@roxi/routify';
 </script>
@@ -13,7 +11,102 @@
 </svelte:head>
 
 <style>
+    /* tabs menu */
+    .bib-item {
+        transition: ease .15s;
+    }
+    .bib-item:not(.main) {
+        opacity: .8;
+    }
+    .bib-item:hover {
+        background: rgba(255,255,255,.15);
+        cursor: pointer;
+        opacity: 1;
+    }
+    .resource-tab-menu::-webkit-scrollbar-track {
+        -webkit-box-shadow: 0 0 0px transparent;
+        border-radius: 0px;
+        background-color: var(--c-p-darkgrey-08);
+    }
+
+    .resource-tab-menu::-webkit-scrollbar {
+        width: 6px;
+        /* background-color: var(--c-p-darkgrey-06); */
+    }
+
+    .resource-tab-menu::-webkit-scrollbar-thumb {
+        border-radius: 50em;
+        -webkit-box-shadow: inset 0 0 0px transparent;
+        background-color: var(--c-p-darkgrey-06);
+        border: 5px solid var(--c-p-darkgrey-08);
+    }
+    .resource-tab-menu::-webkit-scrollbar-thumb:hover {
+        background-color: var(--c-p-darkgrey-05);
+    }
+
+    .resource-tab-menu {
+        overflow-x: scroll;
+        transform: rotateX(180deg);
+        height: 54px;
+    }
+    .resource-tab-menu .item {
+        transform: rotateX(180deg);
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .resource-tab-menu .item.active {
+        background: white;
+    }
+    .resource-tab-menu .item.active .tab-icon.blue  {
+        background: var(--c-p-blue-03);
+        color: white;
+    }
+    .resource-tab-menu .item.active::before,
+    .resource-tab-menu .item.active::after {
+        position: absolute;
+        content: '';
+        background: transparent;
+        height: 10px;
+        width: 10px;
+        bottom: 0px;
+    }
+    .resource-tab-menu .item.active::before {
+        box-shadow: 6px 0 0px 0px white;
+        border-radius: 0 0 0.375rem 0;
+        left: -10px;
+    }
+    .resource-tab-menu .item.active::after {
+        box-shadow: -6px 0 0px 0px white;
+        border-radius: 0 0 0 0.375rem ;
+        right: -10px;
+    }
     /* page headers */
+    /* vertical indicators */
+    .page-header-cues .absolute:after {
+        content: '';
+        width: 2px;
+        height: 10px;
+        position: absolute;
+        background: var(--c-p-darkgrey-06);
+        left: calc(50% - 1px);
+    }
+    .page-header-cues .absolute.-bottom-12:after {
+        top: -10px;
+    }
+    /* horizontal indicators */
+    .page-header-cues .absolute:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        background: var(--c-p-darkgrey-06);
+    }
+    .page-header-cues .absolute.-top-12:before {
+        bottom: -10px;
+    }
+    .page-header-cues .absolute.-bottom-12:before {
+        top: -10px;
+    }
     .page-header-cues .absolute.-top-12.one {
         width: 48px;
         margin-left: .75rem;
@@ -30,6 +123,14 @@
     .page-header-cues .absolute.-top-12.two {
         width: 114px;
         margin-left: 77px;
+    }
+    .page-header-cues .absolute.-bottom-12.five {
+        width: 260px;
+        margin-left: 161px;
+    }
+    .page-header-cues .absolute.-bottom-12.three {
+        width: 62px;
+        margin-left: 75px;
     }
 </style>
 
@@ -257,7 +358,7 @@
         <div class="grid gap-2 leading-relaxed">
             <div>
                 <div class="text-xl font-semibold">
-                    Page Headers
+                    Resource Page Headers
                 </div>
             </div>
             <p>Pages within the Builder platform exist within tabs, much similar to how sites live within tabs in most modern web browsers. Consistent inconography, typograpy and layout helps users quicky determine the type of resource open currently, and how they’re able to interact with it.</p>
@@ -272,25 +373,25 @@
         </div> 
     </div>
 </section>
-<section style="background:var(--b-slider);" data-theme="assembler" class="relative py-8 px-4 my-8 heading-font-initial">
+<section style="background:var(--b-slider);" data-theme="assembler" class="relative py-8 lg:py-16 px-4 my-8 heading-font-initial">
     <div class="container max-w-7xl mx-auto">
         <div class="relative page-header-cues">
-            <div class="absolute -top-12 one">
+            <div class="hidden lg:block absolute -top-12 one">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">1</div>
             </div>
-            <div class="absolute -top-12 two">
+            <div class="hidden lg:block absolute -top-12 two">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">2</div>
             </div>
-            <div class="absolute -top-12 six">
+            <div class="hidden lg:block absolute -top-12 six">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">6</div>
             </div>
-            <div class="absolute -top-12 four">
+            <div class="hidden lg:block absolute -top-12 four">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">4</div>
             </div>
-            <div class="absolute -bottom-12 three">
+            <div class="hidden lg:block absolute -bottom-12 three">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">3</div>
             </div>
-            <div class="absolute -bottom-12 five">
+            <div class="hidden lg:block absolute -bottom-12 five">
                 <div class="mx-auto rounded-full bg-black text-white w-6 h-6 text-sm font-bold flex justify-center items-center">5</div>
             </div>
             <div class="shadow-md p-3 bg-white flex justify-between items-start lg:items-center flex-col lg:flex-row">
@@ -343,6 +444,143 @@
                             <i class="fas fa-ellipsis-h opacity-100"></i>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="relative container max-w-2xl mx-auto px-4 heading-font-override">
+    <!-- page content -->
+    <div class="grid gap-6">  
+        <div class="grid gap-2 leading-relaxed">
+            <div>
+                <div class="text-xl font-semibold">
+                    Resource Tabs
+                </div>
+            </div>
+            <p>Resource Tabs work in unison with Resource Page headers.</p>
+            <p>Application resources exist within tabs in App Builder, mimicing most modern browsers, allowing users to keep multiple resources open, within a single space while building / maintaining their application.</p>
+            <ol class="list-inside list-decimal space-y-2">
+               <li><span class="font-semibold">Active Tab</span> Active tabs show the resource colour in their tab icon background and have a white background that blends into the page header white background, communicating its active state to users</li>
+               <li><span class="font-semibold">Inactive Tab</span> inactive tabs are grey scale in colour to communicate thier inactivty to users</li>
+               <li><span class="font-semibold">Tab Icon</span> helps users quickly identify the resource</li>
+               <li><span class="font-semibold">Close Tab Button</span> allows users to close the resource</li>
+               <li><span class="font-semibold">Tab Menu Scrollbar</span> this shows conditionally, based on the amount of tabs open and the width of the screen</li>
+               <li><span class="font-semibold">Resource Page Header</span> this component displays information relating to the active resource. Consistent inconography, typograpy and layout helps users quicky determine the type of resource open, and how they’re able to interact with it.</li>
+            </ol>
+        </div> 
+    </div>
+</section>
+<section style="background:var(--b-slider);" data-theme="assembler" class="relative py-8 lg:py-16 px-4 my-8 heading-font-initial">
+    <div class="container max-w-7xl mx-auto">
+        <div class="relative">
+            <div class="shadow-md">
+                <div class="resource-tab-menu flex items-start" style="background: var(--c-p-darkgrey-08);">
+                    <div class="opacity-70 hover:opacity-100 item text-gray-700 relative flex items-center h-9 rounded-tr-md rounded-tl-md cursor-pointer">
+                        <div class="tab-icon purple mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-random"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">child/workflows</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times opacity-50 hover:opacity-100"></i></div>
+                    </div>
+                    <div class="item active relative text-gray-700 flex items-center h-9 rounded-tr-md rounded-tl-md cursor-pointer">
+                        <div class="tab-icon blue mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-users"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">Application Permissions</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times opacity-50 hover:opacity-100"></i></div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 item text-gray-700 relative flex items-center h-9 rounded-tr-md rounded-tl-md cursor-pointer">
+                        <div class="tab-icon purple mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-users"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">child/newAutomation</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times opacity-50 hover:opacity-100"></i></div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 item text-gray-700 relative flex items-center h-9 rounded-tr-md rounded-tl-md cursor-pointer">
+                        <div class="tab-icon orange mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-file-image"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">default/login</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times opacity-50 hover:opacity-100"></i></div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 item text-gray-700 relative flex items-center h-9 rounded-tr-md rounded-tl-md cursor-pointer">
+                        <div class="tab-icon orange mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-file-image"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">default/client/home</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times opacity-50 hover:opacity-100"></i></div>
+                    </div>
+                    <div class="opacity-70 hover:opacity-100 item text-gray-700 relative flex items-center h-9 rounded-tr-md rounded-tl-md">
+                        <div class="purple mx-2 text-xs rounded w-6 h-6 flex items-center justify-center">
+                             <i class="fas fa-database"></i>
+                        </div>
+                        <span class="block truncate w-9/12 text-xs">getAllClients</span>
+                        <div class="absolute p-2 text-xs right-0"><i class="fas fa-times"></i></div>
+                    </div>
+                </div>
+                <div class="p-3 bg-white flex justify-between items-start lg:items-center flex-col lg:flex-row">
+                    <div class="flex items-center justify space-x-4">
+                        <div style="background: var(--c-p-blue-03);" class="w-12 h-12 rounded-xl flex text-white items-center justify-center">
+                            <i class="text-xl fas fa-users"></i>
+                        </div>
+                        <div>
+                            <div class="w-11/12 lg:w-max flex items-center space-x-2">
+                                <div>
+                                    <div class="font-bold lg:text-lg relative">
+                                        Permissions
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div style="color: var(--c-p-darkgrey-04);" class="text-sm font-medium">Application Wide</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="space-y-2 lg:space-x-1">
+                            <div class="text-sm inline-block lg:inline rounded-lg font-semibold text-black bg-gray-300 px-4 py-2">
+                                <i class="fas fa-info opacity-70"></i>
+                            </div>
+                            <div class="text-sm inline-block lg:inline rounded-lg font-semibold text-black hover:bg-gray-200 py-2 px-3">
+                                <i class="fas fa-ellipsis-h opacity-100"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="relative container max-w-2xl mx-auto px-4 heading-font-override">
+    <!-- page content -->
+    <div class="grid gap-6">  
+        <div class="grid gap-2 leading-relaxed">
+            <div>
+                <div class="text-xl font-semibold">
+                    Branch Information Banner
+                </div>
+            </div>
+            <p>Assembler uses git version control software to allow users to create, manage and edit individual branches of their application, to allow multiple users to collaborate on the process of building / maintaining web applications.</p>
+            <p>The branch information banner helps users identify which branch they’re currently on within their application. This banner is identifiable at all times, throughout the entire application.</p>
+            <ol class="list-inside list-decimal space-y-2">
+               <li><span class="font-semibold">Current Branch</span> this shows the user what branch they’re currently working on, users can also expand this menu item to open details about the current branch, view all active branches and switch over to these branches if needed.</li>
+               <li><span class="font-semibold">Branch Actions</span> (dynamic) this menu item indicates information to the user about their current branch, and in some cases, provides them an action in regards to their workflow within a branch.</li>
+               <li><span class="font-semibold">Site Link</span> this links users (in a new tab) to their application site.</li>
+            </ol>
+        </div> 
+    </div>
+</section>
+<section style="background:var(--b-slider);" data-theme="assembler" class="relative py-8 lg:py-16 px-4 my-8 heading-font-initial">
+    <div class="container max-w-7xl mx-auto">
+        <div class="relative">
+            <div style="background:var(--c-p-blue-03);" class="text-sm px-2 flex justify-between items-center text-white">
+                <div class="flex justify-between items-center">
+                    <span class="py-1 px-2 space-x-1 bib-item main"><i class="br fas fa-code-branch"></i> <span>Current Branch</span> <i class="fas fa-caret-down opacity-50"></i></span>
+                    <span class="py-1 px-2 space-x-1 bib-item hidden lg:inline"><i class="br fas fa-save opacity-80"></i> <span>Save Changes</span></span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="py-1 px-2 space-x-1 bib-item"><i class="br fas fa-external-link-alt opacity-80"></i> <span>View Site</span></span>
                 </div>
             </div>
         </div>
