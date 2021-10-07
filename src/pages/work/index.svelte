@@ -10,10 +10,11 @@
 
     import 'swiper/css';
     import "swiper/css/pagination"
+    import "swiper/css/navigation"
 
-    import SwiperCore, { Pagination } from 'swiper';
+    import SwiperCore, { Navigation,Pagination } from 'swiper';
 
-    SwiperCore.use([Pagination]);
+    SwiperCore.use([Navigation,Pagination]);
 
 </script>
 
@@ -40,7 +41,7 @@
                     Dashboard
                 </div>
                 <p>Dashboard is the DevOps management platform that simplifies the process of setting up web applications, managing the environments they exist within and the maintenance involved with each of the resources within these environments such as databases, user lists and authentication and servers.</p>
-                <Swiper pagination="{true}" class="showcase">
+                <Swiper navigation="{true}" pagination="{true}" class="showcase">
                     <SwiperSlide>
                         <SliderImage 
                             imgCategory="Dashboard" 
@@ -76,7 +77,7 @@
                     App Builder
                 </div>
                 <p>Builder is the core platform that users interact with to create web pages within their application, set up functional requirements and manage the users within their application.</p>
-                <Swiper pagination="{true}" class="showcase">
+                <Swiper navigation="{true}" pagination="{true}" class="showcase">
                     <SwiperSlide>
                         <SliderImage 
                             imgCategory="App Builder" 
@@ -119,7 +120,7 @@
                     End User Application
                 </div>
                 <p>This is the user facing application that is built through the previous platforms. While it might not seem like a separate platform as its custom built by users within Builder, careful consideration is taken into the page ui components that are available to users as building blocks for their application.</p>
-                <Swiper pagination="{true}" class="showcase">
+                <Swiper navigation="{true}" pagination="{true}" class="showcase">
                     <SwiperSlide>
                         <SliderImage 
                             imgCategory="End User Application" 
@@ -165,7 +166,7 @@
                 <p>I worked in PwC Australia's <a href="https://www.pwc.com/gx/en/about/new-ventures.html" target="_blank" class="underline">New Ventures</a> (Ventures) unit for just over 2 years. The Ventures program is an internal start up incubator for teams creating SaaS solutions within PwC. </p>
                 <p>I was involved with the <a href="https://www.pwc.com.au/services/new-ventures/pwc-automation-engine.pdf" target="_blank" class="underline">Automation Engine</a> (AE) product (which would later become Assembler), a platform that enabled internal teams to automate complex, often manual processes/tasks and transform them into web applications.</p>
                 <p>I worked as the product designer and supported the engineering team with front end development, I created the design system for both the AE platform and the applications that we built on top of AE.</p>
-                <Swiper pagination="{true}" class="showcase">
+                <Swiper navigation="{true}" pagination="{true}" class="showcase">
                     <SwiperSlide>
                         <SliderImage 
                             imgCategory="Automation Engine" 
@@ -203,7 +204,7 @@
                 <div class="grid gap-2 leading-relaxed">
                     <div class="text-base font-semibold">Just Group</div>
                     <p>I worked as a Web Designer / Front End Developer on the Smiggle brand for just over 18 months. During my time at Smiggle I had the opportunity to work on countless digital marketing campaigns across their entire international market base (Australia, New Zealand, UK, Ireland and Asia).</p>
-                    <Swiper pagination="{true}" class="showcase">
+                    <Swiper navigation="{true}" pagination="{true}" class="showcase">
                         <SwiperSlide>
                             <SliderImage 
                                 imgCategory="Smiggle" 
