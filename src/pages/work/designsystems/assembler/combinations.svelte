@@ -157,6 +157,9 @@
         <!-- page content -->
         <div class="grid gap-6">  
             <div class="grid gap-2 leading-relaxed">
+                <div class="rounded-md bg-gray-100 mb-4 p-4 leading-snug">
+                    <span><span class="font-semibold">Please note:</span> This page is still under construction, any lack of content is a result of that fact. </span>
+                </div>
                 <div>
                     <div class="text-xl font-semibold">
                         Forms

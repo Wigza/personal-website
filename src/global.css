@@ -116,12 +116,29 @@ a.link-card:hover .cta svg {
 .swiper.showcase {
   margin: 0.5rem 0;
 }
-@media (min-width: 1024px) {
+
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
   .swiper {
     height: 40rem;
   }
   .swiper.showcase {
     margin: 1rem 0;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    display: flex !important;
+  } 
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 1px !important;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 1px !important;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 28px !important;
   }
 }
 
