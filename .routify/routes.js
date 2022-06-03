@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.3
- * File generated Thu Oct 07 2021 11:59:36 GMT+1100 (Australian Eastern Daylight Time)
+ * File generated Sat Jun 04 2022 09:14:08 GMT+1000 (Australian Eastern Standard Time)
  */
 
 export const __version = "2.18.3"
-export const __timestamp = "2021-10-07T00:59:36.859Z"
+export const __timestamp = "2022-06-03T23:14:08.713Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -24,7 +24,7 @@ export const _tree = {
   "ownMeta": {
     "preload": "proximity"
   },
-  "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/_layout.svelte",
+  "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/_layout.svelte",
   "children": [
     {
       "isFile": true,
@@ -34,7 +34,7 @@ export const _tree = {
       "name": "_fallback",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/_fallback.svelte",
+      "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/_fallback.svelte",
       "importPath": "../src/pages/_fallback.svelte",
       "isLayout": false,
       "isReset": false,
@@ -59,7 +59,7 @@ export const _tree = {
       "name": "about",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/about.svelte",
+      "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/about.svelte",
       "importPath": "../src/pages/about.svelte",
       "isLayout": false,
       "isReset": false,
@@ -84,7 +84,7 @@ export const _tree = {
       "name": "index",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/index.svelte",
+      "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/index.svelte",
       "importPath": "../src/pages/index.svelte",
       "isLayout": false,
       "isReset": false,
@@ -109,7 +109,7 @@ export const _tree = {
       "name": "work",
       "ext": "",
       "badExt": false,
-      "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work",
+      "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work",
       "children": [
         {
           "isFile": false,
@@ -119,7 +119,7 @@ export const _tree = {
           "name": "designsystems",
           "ext": "",
           "badExt": false,
-          "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems",
+          "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems",
           "children": [
             {
               "isFile": false,
@@ -129,7 +129,7 @@ export const _tree = {
               "name": "assembler",
               "ext": "",
               "badExt": false,
-              "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/assembler",
+              "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/assembler",
               "children": [
                 {
                   "isFile": true,
@@ -139,7 +139,7 @@ export const _tree = {
                   "name": "combinations",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/assembler/combinations.svelte",
+                  "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/assembler/combinations.svelte",
                   "importPath": "../src/pages/work/designsystems/assembler/combinations.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -164,7 +164,7 @@ export const _tree = {
                   "name": "components",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/assembler/components.svelte",
+                  "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/assembler/components.svelte",
                   "importPath": "../src/pages/work/designsystems/assembler/components.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -189,7 +189,7 @@ export const _tree = {
                   "name": "foundations",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/assembler/foundations.svelte",
+                  "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/assembler/foundations.svelte",
                   "importPath": "../src/pages/work/designsystems/assembler/foundations.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -214,7 +214,7 @@ export const _tree = {
                   "name": "index",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/assembler/index.svelte",
+                  "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/assembler/index.svelte",
                   "importPath": "../src/pages/work/designsystems/assembler/index.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -253,7 +253,7 @@ export const _tree = {
               "name": "index",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/designsystems/index.svelte",
+              "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/designsystems/index.svelte",
               "importPath": "../src/pages/work/designsystems/index.svelte",
               "isLayout": false,
               "isReset": false,
@@ -292,7 +292,7 @@ export const _tree = {
           "name": "index",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "/Users/timphillips/Desktop/Code/svelte-projects/personal-website/src/pages/work/index.svelte",
+          "absolutePath": "/Users/tim.phillips/Documents/GitHub/personal-website/src/pages/work/index.svelte",
           "importPath": "../src/pages/work/index.svelte",
           "isLayout": false,
           "isReset": false,

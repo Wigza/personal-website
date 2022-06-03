@@ -26,14 +26,28 @@
             <div class="grid gap-2 leading-relaxed">
                 <div>
                     <div class="text-xl font-semibold">
+                        Carsales
+                    </div>
+                    <div class="text-sm font-normal uppercase">
+                        November 2021 - Present
+                    </div>
+                </div>
+                <p>I work as the product designer for the consumer facing user experience across the <a href="https://www.carsales.com.au/carsales-select" target="_blank" class="underline">Carsales SELECT</a> project, which aims to transition tradiotional consumer car buying behaviour to online. </p>
+            </div>      
+        </div> 
+        <!-- heading -->
+        <div class="grid gap-6 border-b pb-10 mb-10">
+            <div class="grid gap-2 leading-relaxed">
+                <div>
+                    <div class="text-xl font-semibold">
                         Assembler
                     </div>
                     <div class="text-sm font-normal uppercase">
-                        July 2020 - Present
+                        July 2020 - November 2021
                     </div>
                 </div>
-                <p>I work as the lead product designer and front end engineer at Assembler, within their platform team, which works across the entire spectrum of the Assembler product suite.</p>
-                <p>Assembler is a platform that allows users to create and manage web applications. Assembler’s product suite is made up of 3 seperate platforms that work in combination to provide users the necessary tools to build web applications. I've had the opportunity to design these platforms, creating a harmonious <a href="{$url('./designsystems/assembler')}" class="underline">design system</a> that provides a consistent and intuitive user experience across the product suite. </p>
+                <p>I worked as the lead product designer and front end engineer at Assembler, within their platform team, which distributed my efforts across the entire spectrum of their product suite.</p>
+                <p>Assembler is a platform that allows users to create and manage web applications. Assembler’s product suite is made up of 3 seperate platforms that work in combination to provide users the necessary tools to build web applications. I had the opportunity to design these platforms, creating a harmonious <a href="{$url('./designsystems/assembler')}" class="underline">design system</a> along the way, that providesd a consistent and intuitive user experience across the product suite. </p>
                 <p>I’ve breifly outlined these platforms and provided examples of each below.</p>
             </div>    
             <div class="grid gap-2 leading-relaxed">
